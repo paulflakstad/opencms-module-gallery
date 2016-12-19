@@ -1,0 +1,35 @@
+.gallerythumb {
+    height:180px;
+}
+
+.gallerythumb .thumbnail {  }
+
+.gallery .gallerythumb .thumbnail a {
+    text-decoration:none;
+    position:relative;
+    display:block;
+    width:140px;
+    height:140px;
+    line-height:141px; 
+    margin-bottom:5px;
+}
+
+.gallery .gallerythumb .thumbnail a img {
+}
+
+.gallery .gallerythumb .thumbnail a:hover {
+    margin-bottom:5px;
+}
+
+.gallery-copyright-link {  }
+
+.gallerythumb .thumbnail a:visited {  } 
+
+.gallerythumb a img {  }
+
+.gallerythumb a:hover img {  }
+
+.gallerythumb .thumbnail a,
+.gallerythumb .thumbnail a:hover,
+.gallerythumb .thumbnail a:visited { border:none; }
+

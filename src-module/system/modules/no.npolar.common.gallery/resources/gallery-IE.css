@@ -1,0 +1,59 @@
+.gallery { 
+	padding-bottom:2em; 
+	float:left; 
+}
+
+/* Wrapper for thumbnail and text link */
+.gallerythumb {
+	display:table;
+	float:left;
+	clear:none;
+	margin-right:0;
+	margin-bottom:20px;
+	width:145px;
+	height:145px;
+	text-align:center; /* needed for thumbs to be horizontally centered in FF */
+	background:#eeeeee;
+	/*overflow:auto;*/
+}
+
+/* Thumbnail wrapper */
+.gallerythumb .thumbnail {
+	display:block;		/* important because of vertical alignment */
+	float:none;
+	position:relative;
+}
+
+/* Thumbnails (links to larger images) */
+.gallery .gallerythumb .thumbnail a {
+	text-decoration:none;
+	position:relative;
+	display:block;
+	width:142px;
+	height:142px;
+	line-height:142px; 
+	/*margin-bottom:5px;
+	padding-bottom:2px;*/
+	background-color:#ffffff;
+}
+
+.gallery .gallerythumb .thumbnail a img {
+	vertical-align:middle;
+	border:1px solid #aaaaaa;
+}
+
+/* Hovering over thumbnails */
+.gallery .gallerythumb .thumbnail a:hover {
+	text-decoration:none;
+}
+.gallery .gallerythumb .thumbnail a:hover img {
+	border:1px solid #666666;
+}
+
+/*.gallerythumb .thumbnail a, */
+.gallerythumb .thumbnail a:visited 	{ /*border:1px solid #eeeeee;*/ } /* needs a border, or border:none to work properly */
+.gallerythumb a img 			{ border:none; }
+.gallerythumb a:hover img 		{ border:none; }
+.gallerythumb .thumbnail a,
+.gallerythumb .thumbnail a:hover,
+.gallerythumb .thumbnail a:visited 	{ border:none; }

@@ -45,3 +45,10 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# IDE & frameworks
+*/nbproject/*
+WEB-INF
+META-INF
+*/build.xml
+*/manifest.mf

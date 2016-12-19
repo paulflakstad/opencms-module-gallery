@@ -1,0 +1,56 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	
+	<xsd:include schemaLocation="opencms://opencms-xmlcontent.xsd"/>		
+	<xsd:element name="Gallerys" type="OpenCmsGallerys"/>
+	
+	<xsd:complexType name="OpenCmsGallerys">
+            <xsd:sequence>
+                <xsd:element name="Gallery" type="OpenCmsGallery" minOccurs="0" maxOccurs="unbounded"/>
+            </xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="OpenCmsGallery">
+            <xsd:sequence>
+                <xsd:element name="Title" type="OpenCmsString" />
+                <xsd:element name="Teaser" type="OpenCmsString" minOccurs="0" maxOccurs="1" />
+                <xsd:element name="Text" type="OpenCmsHtml" minOccurs="0" maxOccurs="1" />
+                <xsd:element name="ImageFolder" type="OpenCmsVfsFile" />
+                <xsd:element name="CoverImage" type="OpenCmsVfsFile" minOccurs="0" maxOccurs="1" />
+                <xsd:element name="ThumbnailSize" type="OpenCmsString" />
+                <xsd:element name="ThumbnailQuality" type="OpenCmsString" />
+                <xsd:element name="ThumbnailCaption" type="OpenCmsBoolean" default="false" />
+                <xsd:element name="DownloadLinks" type="OpenCmsBoolean" default="false" />
+                <xsd:element name="DownloadFolder" type="OpenCmsVfsFile" minOccurs="0" maxOccurs="1" />
+            </xsd:sequence>
+            <xsd:attribute name="language" type="OpenCmsLocale" use="optional" />
+	</xsd:complexType>
+
+	<xsd:annotation>
+            <xsd:appinfo>
+                <resourcebundle name="no.npolar.common.gallery.workplace"/>
+                <mappings>
+                    <mapping element="Title" mapto="property:Title" />
+                    <mapping element="Teaser" mapto="property:Description" />
+                    <mapping element="CoverImage" mapto="property:image.thumb" />
+                </mappings>
+                <layouts>
+                    <layout element="CoverImage" widget="ImageGalleryWidget" />
+                    <layout element="ThumbnailQuality" widget="SelectorWidget" configuration="low|high*" />
+                    <layout element="Text" widget="HtmlWidget" configuration="height:120px,format,link,source" />
+                </layouts>
+                <searchsettings>
+                    <searchsetting element="ImageFolder" searchcontent="false" />
+                    <searchsetting element="CoverImage" searchcontent="false" />
+                    <searchsetting element="ThumbnailSize" searchcontent="false" />
+                    <searchsetting element="ThumbnailQuality" searchcontent="false" />
+                    <searchsetting element="DownloadLinks" searchcontent="false" />
+                    <searchsetting element="DownloadFolder" searchcontent="false" />
+                </searchsettings>
+                <validationrules>
+                    <rule element="Title" regex="!.*[Ee]rror.*" message="${key.editor.errormessage.Article.mustnotcontainerror|${validation.path}}" />
+                    <rule element="Title" regex="!.*[Ww]arn.*" type="warning" message="${key.editor.warning.Article.mustnotcontainwarn|${validation.path}}"/>			
+                    <rule element="ThumbnailSize" regex="[0-9]*" type= "warning" message="The value must be a number."/>
+                </validationrules>
+            </xsd:appinfo>
+	</xsd:annotation> 
+</xsd:schema>

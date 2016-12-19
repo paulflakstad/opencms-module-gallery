@@ -1,0 +1,69 @@
+@charset "utf-8";
+/* CSS Document */
+/* New, improved stylesheet for the image gallery module */
+@media screen, print {
+/* Embedded gallery */
+.paragraph.gallery {
+	margin-bottom:2em;
+}
+/* Free-standing gallery */
+.gallery {
+	float:none;
+	overflow:auto;
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+.portal ul.gallery {
+    list-style-image: none;
+}
+.highslide-caption {
+	display:none;
+}
+.gallerythumb, 
+.gallerythumb a {
+	line-height:0;
+}
+.gallerythumb {
+	float:left;
+	margin:0 1% 1% 0;
+	background:orange;
+	width:auto;
+	width:15.6667%;
+}
+.gallerythumb .thumbnail-wrapper {
+}
+.gallerythumb a {
+	display:block;
+	position:relative;
+	border:1px solid #999;
+	border:1px solid #eee;
+}
+.gallerythumb a:hover {
+	background-color:#eee;
+	border:1px solid #eee;
+	border:1px solid #999;
+}
+.gallerythumb a img {
+	width:100%;
+}
+.gallerythumb a img:hover {
+}
+.gallerythumb .image-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 99;
+    background:rgba(0, 0, 0, 0.1);
+}
+.gallerythumb .image-overlay:hover {
+    background:rgba(0, 0, 0, 0.0);
+}
+/************ Gallery-list *************/
+.galleries .gallery img { float:left; margin:0 0.5em 0.5em 0; }
+.galleries .gallery h2,
+.galleries .gallery h3 { margin:0 0 0.25em 0; padding:0; }
+.galleries .gallery { overflow:auto; margin-bottom:1em; }
+}

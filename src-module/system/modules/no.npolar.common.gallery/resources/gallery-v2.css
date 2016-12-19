@@ -1,0 +1,56 @@
+@charset "utf-8";
+/* CSS Document */
+/* New, improved stylesheet for the image gallery module */
+@media screen, print {
+
+/* Embedded gallery */
+.paragraph.gallery { 
+	max-height:300px;
+        /*overflow:auto;*/
+}
+
+/* Free-standing gallery */
+.gallery {
+	overflow:auto;
+}
+
+.gallery {
+	overflow:auto;
+}
+.gallerythumb, 
+.gallerythumb a {
+	width:106px;
+	height:106px;
+	line-height:106px;
+}
+.gallerythumb {
+	float:left;
+	border:1px solid #ccc;
+	margin:0 1px 1em 0;
+	/* Horizontal centering: */
+	text-align:center;
+}
+.highslide-caption {
+	display:none;
+}
+.gallerythumb a {
+	/* Vertical centering: */
+	display:table-cell;
+	vertical-align:middle;
+}
+.gallerythumb a:hover {
+	background-color:#eee;
+}
+.gallerythumb a img { 
+	border:1px solid #ddd;
+}
+.gallerythumb a img:hover {
+	border:1px solid #666;
+}
+
+/*            Gallery-list          */
+.galleries .gallery img { float:left; margin:0 0.5em 0.5em 0; }
+.galleries .gallery h2,
+.galleries .gallery h3 { margin:0 0 0.25em 0; padding:0; }
+.galleries .gallery { overflow:auto; margin-bottom:1em; }
+}

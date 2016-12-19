@@ -1,0 +1,88 @@
+/*****************************/
+/*         galleries         */
+/*****************************/
+
+/* Embedded gallery */
+.paragraph.gallery { 
+	max-height:300px;
+        overflow:auto;
+}
+
+/* Thumbnails (links to larger images) */
+.gallery .gallerythumb a.thumbnail {
+	border:none;
+	border:1px solid #eee;
+	text-decoration:none;
+	display:table-cell;
+	vertical-align:middle;
+	width:140px;
+	height:144px;
+	position:relative;
+	/*border:1px solid red;*/
+}
+
+/* Hovering over thumbnails */
+.gallery .gallerythumb a.thumbnail:hover {
+	border:none;
+	border:1px solid #ccc;
+	background-color:#eee;
+	text-decoration:none;
+	display:table-cell;
+}
+
+/* Thumbnail wrapper */
+div.thumbnail {
+	display:table;		/* important because of vertical alignment */
+	float:left;
+	width:142px;
+	height:142px;
+	position:relative;
+	/*overflow:visible;*/
+}
+
+/* Wrapper for thumbnail and text link */
+.gallerythumb {
+	display:block;
+	float:left;
+	clear:none;
+	margin:0 1px;
+	margin-bottom:20px;
+	width:144px;
+	height:160px;
+	text-align:center; /* needed for thumbs to be horizontally centered in FF */
+	position:relative;
+}
+
+.gallerythumb img {
+	margin:0;
+	padding:0;
+	border:1px solid #eee;
+	top:0;
+	position:relative;
+}
+
+.gallerythumb a.thumbnail, 
+.gallerythumb a.thumbnail:visited {
+	/* needs a border, or border:none to work properly */
+	border:1px solid #eee; 
+}
+
+.gallerythumb a img {
+}
+
+.gallerythumb a:hover img {
+}
+
+.gallery .thumbnail .highslide-caption { 
+	display:none; 
+}
+
+/*            Gallery-list          */
+.galleries .gallery img { float:left; margin:0 0.5em 0.5em 0; }
+.galleries .gallery h2,
+.galleries .gallery h3 { margin:0 0 0.25em 0; padding:0; }
+.galleries .gallery { overflow:auto; margin-bottom:1em; }
+
+/********************** END OF GALLERIES ***************************/
+
+
