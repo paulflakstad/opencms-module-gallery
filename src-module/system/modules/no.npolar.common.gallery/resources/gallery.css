@@ -1,88 +1,107 @@
-/*****************************/
-/*         galleries         */
-/*****************************/
+@charset "utf-8";
+/* CSS Document */
+/* New, improved stylesheet for the image gallery module */
+@media screen, print {
+
+/* Gallery wrapper */
+.gallery {
+    float: none;
+    overflow: auto;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
 /* Embedded gallery */
-.paragraph.gallery { 
-	max-height:300px;
-        overflow:auto;
+.paragraph.gallery,
+.paragraph .gallery {
+    margin-bottom: 2em;
 }
 
-/* Thumbnails (links to larger images) */
-.gallery .gallerythumb a.thumbnail {
-	border:none;
-	border:1px solid #eee;
-	text-decoration:none;
-	display:table-cell;
-	vertical-align:middle;
-	width:140px;
-	height:144px;
-	position:relative;
-	/*border:1px solid red;*/
+.portal ul.gallery {
+    list-style-image: none;
+}
+/* captions */
+.gallery .gallerythumb figcaption,
+.highslide-caption {
+    display: none;
 }
 
-/* Hovering over thumbnails */
-.gallery .gallerythumb a.thumbnail:hover {
-	border:none;
-	border:1px solid #ccc;
-	background-color:#eee;
-	text-decoration:none;
-	display:table-cell;
+.gallerythumb, 
+.gallerythumb a {
+    line-height: 0;
 }
 
-/* Thumbnail wrapper */
-div.thumbnail {
-	display:table;		/* important because of vertical alignment */
-	float:left;
-	width:142px;
-	height:142px;
-	position:relative;
-	/*overflow:visible;*/
-}
-
-/* Wrapper for thumbnail and text link */
 .gallerythumb {
-	display:block;
-	float:left;
-	clear:none;
-	margin:0 1px;
-	margin-bottom:20px;
-	width:144px;
-	height:160px;
-	text-align:center; /* needed for thumbs to be horizontally centered in FF */
-	position:relative;
+    float: left;
+    margin: 0 1% 1% 0;
+    background: orange;
+    width: auto;
+    width: 15.6667%;
+    position: relative;
 }
 
-.gallerythumb img {
-	margin:0;
-	padding:0;
-	border:1px solid #eee;
-	top:0;
-	position:relative;
+.gallerythumb a {
+    display: block;
+    position: relative;
+    border: 1px solid #999;
+    border: 1px solid #eee;
 }
 
-.gallerythumb a.thumbnail, 
-.gallerythumb a.thumbnail:visited {
-	/* needs a border, or border:none to work properly */
-	border:1px solid #eee; 
+.gallerythumb a:hover {
+    background-color: #eee;
+    border: 1px solid #eee;
+    border: 1px solid #999;
 }
 
 .gallerythumb a img {
+    width: 100%;
 }
 
-.gallerythumb a:hover img {
+.gallerythumb a img:hover {
 }
 
-.gallery .thumbnail .highslide-caption { 
-	display:none; 
+.gallerythumb .image-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 99;
+    background: rgba(0, 0, 0, 0.1);
 }
 
-/*            Gallery-list          */
-.galleries .gallery img { float:left; margin:0 0.5em 0.5em 0; }
+.gallerythumb .image-overlay:hover {
+    background: rgba(0, 0, 0, 0.0);
+}
+
+.gallerythumb__title {
+    position: absolute;
+    display: block;
+    left: 1px;
+    right: 1px;
+    bottom: 1em;
+    padding: 0.5em 1em;
+    background: #000;
+    background: rgba(0,0,0,0.75);
+    color: #fff;
+    font-size: smaller;
+    text-align: center;
+    line-height: 1em;
+}
+
+/************ Gallery-list *************/
+.galleries .gallery img {
+    float: left;
+    margin: 0 0.5em 0.5em 0; 
+}
 .galleries .gallery h2,
-.galleries .gallery h3 { margin:0 0 0.25em 0; padding:0; }
-.galleries .gallery { overflow:auto; margin-bottom:1em; }
-
-/********************** END OF GALLERIES ***************************/
-
-
+.galleries .gallery h3 {
+    margin: 0 0 0.25em 0;
+    padding:0;
+}
+.galleries .gallery {
+    overflow: auto;
+    margin-bottom: 1em;
+}
+}
